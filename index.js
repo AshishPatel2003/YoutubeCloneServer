@@ -26,8 +26,7 @@ app.use(express.urlencoded({limit:"30mb", extended:true}))
 app.use('/uploads',express.static(path.join('uploads')))
 
 app.get("/", (req, res) => {
-    res.send("Hello");
-    res.send(process.env.CONNECTION_URL);
+    res.send("Hello", process.env.CONNECTION_URL), " Done";
 });
 
 app.use(bodyParser.json())
