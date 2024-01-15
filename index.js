@@ -15,6 +15,7 @@ app.use(cors())
 
 
 const DB_URL = process.env.CONNECTION_URL
+console.log(DB_URL);
 mongoose.connect(DB_URL, {}).then(()=>{
     console.log("MongoDB database connected");
 }).catch((error)=>{
